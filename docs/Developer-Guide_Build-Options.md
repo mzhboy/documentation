@@ -60,3 +60,10 @@
 - **FORCE_CHECKOUT** (yes&#124;no): set to "no" to skip forced sources checkout and patching
 - **FORCE_BOOTSCRIPT_UPDATE** (yes&#124;no): set to "yes" to force bootscript to get updated during bsp package upgrade
 - **NAMESERVER** (ipv4 address): the DNS resolver used inside the build chroot. Does not affect the final image. Default: 1.0.0.1
+- **DOWNLOAD_MIRROR** select download mirror for `toolchain` and `debian/ubuntu packages`.
+	- set to `china` to use `mirrors.tuna.tsinghua.edu.cn`, it will be very fast for mainland china users thanks to tsinghua university.
+	- leave it unset to use official source.
+- **MAINLINE_MIRROR** select mainline mirror of `linux-stable.git`
+	- set to `google` to use mirror provided by Google, the same as `USE_MAINLINE_GOOGLE_MIRROR=yes`.
+	- set to `tuna` to use mirror provided by tsinghua university.
+	- leave it unset to use offical `git.kernel.org`.
